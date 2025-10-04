@@ -16,7 +16,7 @@ app.use(express.json());
 app.use(cors());
 
 // ================== MongoDB ==================
-const MONGO_URI = process.env.MONGO_URI || 'mongodb://127.0.0.1:27017/devops';
+const MONGO_URI = process.env.MONGO_URI || 'mongodb://127.0.0.1:27017';
 
 mongoose.connect(MONGO_URI, {
   useNewUrlParser: true,
