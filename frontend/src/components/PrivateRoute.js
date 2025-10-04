@@ -8,6 +8,7 @@ const PrivateRoute = ({ children, role }) => {
   if (!token) {
     // Nếu không có token, điều hướng người dùng đến trang login
     return <Navigate to="/login" replace />;
+    
   }
 
   try {
