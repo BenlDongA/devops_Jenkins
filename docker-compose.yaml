@@ -1,7 +1,10 @@
 version: '3.8'
+
 services:
   backend:
-    build: ./backend
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
     container_name: backend
     restart: always
     ports:
@@ -12,7 +15,9 @@ services:
       - JWT_SECRET=jwtsecret123
 
   frontend:
-    build: ./frontend
+    build:
+      context: ./frontend         # ✅ build context chính xác
+      dockerfile: Dockerfile      # ✅ chỉ rõ file Dockerfile
     container_name: frontend
     restart: always
     ports:
