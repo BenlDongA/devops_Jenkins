@@ -16,7 +16,8 @@ app.use(express.json());
 app.use(cors());
 
 // ================== MongoDB ==================
-const MONGO_URI = process.env.MONGO_URI || 'mongodb+srv://cuong:cuong@cluster0.mc5n4.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0';
+const MONGO_URI = process.env.MONGO_URI || 'mongodb://localhost:27017/foodapp';
+
 
 mongoose.connect(MONGO_URI, {
   useNewUrlParser: true,
@@ -61,7 +62,7 @@ app.get('/', (req, res) => {
       <body>
         <div class="box">
           <h1>🚀 Server is running!</h1>
-          <p>Đang chạy tại: <b>http://localhost:5000</b></p>
+          <p>Đang chạy tại: <b>http://54.90.122.196:5000/</b></p>
         </div>
       </body>
     </html>
